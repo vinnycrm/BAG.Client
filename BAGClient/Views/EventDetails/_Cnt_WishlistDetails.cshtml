@@ -1,0 +1,24 @@
+﻿@model BAG.CustomObject.WishList[]
+@{
+    if (Model != null)
+    {
+        if (Model.Count() > 0)
+        {
+            <script>
+            window.onload = function () {
+                EventSummary('@Model[0].Id')
+            };
+            </script>
+        }
+    }
+}
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <div class="list-group-item">
+            <a style="text-decoration:none;" href="javascript:EventSummary('@item.Id')">
+                <i class="fa fa-tasks fa-fw"></i> @item.WList_Name
+            </a>
+        </div>
+    }
+</div>

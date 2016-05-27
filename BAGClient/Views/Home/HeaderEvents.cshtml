@@ -1,0 +1,50 @@
+﻿@model BAG.CustomObject.Group_HeaderEvent
+
+<div class="row">
+    <div class="col-sm-6" style="padding 0px 50px;">
+        <img src="/img/Main2.jpg" name="MyImage" class="img-responsive hidden-xs" alt="">
+    </div>
+        <div class="col-sm-3">
+            <h5>Event Invites</h5>
+            <ul>
+                @if (Model.EventInvites.Count() > 0)
+            {
+                foreach (var items in Model.EventInvites)
+                {
+                    <li>
+                        <a href='@Url.Action("EventContributer", "EventDetails", new { @id = @items.Event_Id })' onmouseover="document.MyImage.src = '@items.Event_Image';" onmouseout="    document.MyImage.src = '/img/Main2.jpg';">@items.Event_Name</a>
+                    </li>
+                }
+                <li>
+                    <a style="color:#da4d4d;font-size: medium;" href='@Url.Action("MyInvites", "Events")'>View All</a>
+                </li>
+            }
+            else
+            {
+                    <li>
+                        <a href='@Url.Action("Create", "Events")'>You Don't Have Any Invited Events..Why Dont You Create One??</a>
+                    </li>
+            }
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h5>My Events</h5>
+            <ul>
+                @if (Model.MyEvent.Count() > 0)
+            {
+                foreach (var items in Model.MyEvent)
+                {
+                    <li>
+                        <a href='@Url.Action("Index", "EventDetails", new { @id = @items.Event_Id })' onmouseover="document.MyImage.src ='@items.Event_Image';" onmouseout="    document.MyImage.src = '/img/Main2.jpg';">@items.Event_Name</a>
+                    </li>
+                }
+                <li>
+                    <a style="color:#da4d4d;font-size: medium;" href='@Url.Action("MyEvents", "Events")'>View All</a>
+                </li>
+            }
+                <li>
+                    <a style="color:#da4d4d;font-size: medium;" href='@Url.Action("Create", "Events")'>Create An Event</a>
+                </li>
+            </ul>
+        </div>
+</div>

@@ -1,0 +1,114 @@
+﻿@model BAG.CustomObject.EventDetails
+
+<div id="Add" class="modal modal-wide fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" id="modalresize">
+                <div class="panel-group" style="margin-bottom: 0.1cm;">
+                    <div class="panel panel-default panelaligning">
+                        <div class="panel-heading ">
+                            <i class="fa fa-times fa-2x pull-right removeicon2" aria-hidden="true" data-dismiss="modal"></i>
+                            <h3 class="panel-title redtext" style="padding-top:0.1cm;">
+                                <span style="margin-top:-10px;" class="pull-left"><i class="fa fa-fw fa-plus-circle"></i>&nbsp;Add Items</span><a href="javascript:void(0)" data-toggle="modal" data-target="#Anno">
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tabbable">
+                                <!-- Only required for left/right tabs -->
+                                <ul class="nav nav-tabs ">
+                                    <li class="active"><a href="#tab1" data-toggle="tab">Select Items</a></li>
+                                    <li><a href="#tab2" data-toggle="tab">Add Manually</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1">
+                                        @using (Ajax.BeginForm("AddItemsToWishlist", "EventDetails", null, new AjaxOptions
+                                    {
+                                        HttpMethod = "POST",
+                                        UpdateTargetId = "resultTarget",
+                                        OnSuccess = "UpdateEventSummary()"
+                                    }, new { id = "resultTarget" }))
+                                    {
+                                            <div class="col-md-offset-9">
+                                                <button class="btn btn-default buttoncolor " data-backdrop="static" data-keyboard="false">
+                                                    <span class="fa fa-gift"></span>
+                                                    Add To Wishlist
+                                                </button>
+
+                                            </div>
+
+                                            <div class="container-fluid" id="style-4">
+                                                <div class="col-md-12">
+                                                    @for (int i = 0; i < Model.ItemList.Count(); i++)
+                                                {
+                                                        <div class="col-md-3 col-sm-6">
+                                                            <div class="thumbnail thumbsize">
+                                                                <p data-placement="top" data-title="Amount" data-toggle="tooltip"><button class="buttondisable btn btn-default btn-xs"><span class="fa fa-inr"></span>&nbsp;@Model.ItemList[i].Item_Tentative_Cost</button></p>
+                                                                <img src='@Model.ItemList[i].Media_Id_Img' alt="ALT NAME" class="img-responsive img-hover" style="height:80px;">
+                                                                <div class="caption">
+
+                                                                    <h5 class="text-center lineheightadditems">
+                                                                        @Model.ItemList[i].Item_Name
+                                                                    </h5>
+                                                                    <h6 class="text-center lineheightadditems">
+                                                                        @Html.CheckBoxFor(model => model.ItemList[i].Selected)
+                                                                        @Html.HiddenFor(model => model.ItemList[i].Item_Id, new { Value = @Model.ItemList[i].Item_Id })
+                                                                        @Html.HiddenFor(model => model.ItemList[i].Item_Tentative_Cost, new { Value = @Model.ItemList[i].Item_Tentative_Cost })
+                                                                    </h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                }
+                                                    @Html.HiddenFor(model => model.EventMaster.Event_Id, new { Value = @Model.EventMaster.Event_Id })
+                                                    @Html.HiddenFor(model => model.CreateWishlist.Id, new { Value = @Model.CreateWishlist.Id })
+                                                </div>
+                                            </div>
+                                    }
+
+                                    </div>
+                                    <div class="tab-pane tabwidth" id="tab2">
+
+                                        <div class="container-fluid">
+                                            <br>
+                                            <div class="form-group col-md-5 col-md-offset-1">
+
+                                                <input type="text" class="form-control " placeholder="Product Name" id="usr">
+                                            </div>
+                                            <div class="form-group col-md-5">
+
+                                                <input type="password" placeholder="price" class="form-control " id="pwd">
+                                            </div>
+
+                                            <div class="form-group col-md-5 col-md-offset-1">
+
+                                                <span class="col-md-8 col-xs-12 ">
+                                                    <input type="file" name="image select">
+                                                </span>
+
+                                            </div>
+                                            <div class="form-group col-md-5 message" style="margin-top:-10px;">
+                                                <textarea class=" form-control " placeholder="Description"></textarea>
+                                            </div>
+                                            <div class="form-group col-md-offset-2 col-md-3">
+                                                <button type="button" class="btn btn-success   form-control ">Add</button>
+                                            </div>
+
+                                            <div class="form-group col-md-3  ">
+                                                <button type="button" class="btn btn-warning   form-control ">Clear</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="alertmessage">
+                                            <span class="glyphicon glyphicon-hand-right"></span> &nbsp;<span style="color: #da4d4d; font-size: 13px;">Illegal Items Are Restricted</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+

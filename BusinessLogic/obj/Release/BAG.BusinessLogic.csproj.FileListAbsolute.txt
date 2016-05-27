@@ -1,0 +1,7 @@
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Release\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Release\BusinessLogic.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Release\DataObject.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Release\DataObject.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\obj\Release\BAG.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\obj\Release\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\obj\Release\BusinessLogic.pdb

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrewAgift", "BAGClient\BrewAgift.csproj", "{F20028EA-A71C-4E28-971B-3AC1C08B1349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAG.BusinessLogic", "BusinessLogic\BAG.BusinessLogic.csproj", "{1715FA9B-278A-473C-BA49-20690E7BC623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAG.CustomObject", "BAG.CustomObject\BAG.CustomObject.csproj", "{1AEFCEE6-55E7-4564-8AF1-0F9DD2D54F34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F20028EA-A71C-4E28-971B-3AC1C08B1349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20028EA-A71C-4E28-971B-3AC1C08B1349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20028EA-A71C-4E28-971B-3AC1C08B1349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20028EA-A71C-4E28-971B-3AC1C08B1349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1715FA9B-278A-473C-BA49-20690E7BC623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1715FA9B-278A-473C-BA49-20690E7BC623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1715FA9B-278A-473C-BA49-20690E7BC623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1715FA9B-278A-473C-BA49-20690E7BC623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AEFCEE6-55E7-4564-8AF1-0F9DD2D54F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEFCEE6-55E7-4564-8AF1-0F9DD2D54F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEFCEE6-55E7-4564-8AF1-0F9DD2D54F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEFCEE6-55E7-4564-8AF1-0F9DD2D54F34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

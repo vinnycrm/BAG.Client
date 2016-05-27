@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew A Gift </title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="all">
+        <header>
+            <div id="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-5 contact">
+                            <p class="hidden-sm hidden-xs"><i class="fa fa-envelope"></i> info@brewagift.com</p>
+                            <p class="hidden-md hidden-lg">
+                                <a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>  <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                            </p>
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="social">
+                                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                            </div>
+
+                            <div class="login">
+                                @if (Session["UserId"] == null)
+                                {
+                                    <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a>
+                                    <a href='@Url.Action("Index", "Account")'><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">*@
+                <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <ul class="nav navbar-nav navbar-left hidden navbar-toggleicon">
+                                <li>
+                                    <a href="javascript:void(0);" class="fsnav-left"><i class="fa fa-bars fsnav-left" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                            <a class="navbar-brand home" href='@Url.Action("Index", "Home")'>
+                                <img src="/img/Final-Logo.png" width="105" height="55" alt="Brew A Gift">
+                            </a>
+                            <div class="navbar-buttons">
+                                <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <i class="fa fa-align-justify"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="navbar-collapse collapse" id="navigation">
+                            <ul class="nav navbar-nav navbar-right">
+                                @if (Session["UserId"] != null)
+                                {
+                                    <li class="dropdown @(ViewContext.RouteData.GetRequiredString("Controller") == "Home" ? "active" : "")">
+                                        <a href='@Url.Action("Index", "Home")'> Home </a>
+                                    </li>
+                                    <li class="dropdown @(ViewContext.RouteData.GetRequiredString("Controller") == "Dashboard" ? "active" : "") ">
+                                        <a href='@Url.Action("Index", "Dashboard")'> Dashboard </a>
+                                    </li>
+                                    <li class="dropdown use-yamm yamm-fw @(ViewContext.RouteData.GetRequiredString("Controller") == "EventDetails" ? "active" : "")">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="yamm-content">
+                                                    @Html.Action("HeaderEvents", "Home")
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown @(ViewContext.RouteData.GetRequiredString("Controller") == "MyContact" ? "active" : "")">
+                                        <a href='@Url.Action("Index", "MyContact")'>My Contacts </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Convert.ToString(Session["UserName"]) <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href='@Url.Action("MyProfile", "Profile")'> &nbsp;My Profile</a></li>
+                                            <li><a href='@Url.Action("Logout", "Account")'> &nbsp;Logout</a></li>
+                                        </ul>
+
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="dropdown @(ViewContext.RouteData.GetRequiredString("Controller") == "Home" ? "active" : "")">
+                                        <a href='@Url.Action("Index", "Home")'> Home </a>
+                                    </li>
+                                    <li class="dropdown @(ViewContext.RouteData.GetRequiredString("Controller") == "HowItWorks" ? "active" : "")">
+                                        <a href='@Url.Action("Index", "HowItWorks")'> How it Works? </a>
+                                    </li>
+                                    <li class="dropdown @(ViewContext.RouteData.GetRequiredString("Controller") == "About" ? "active" : "")">
+                                        <a href='@Url.Action("Index", "About")'> About Us </a>
+                                    </li>
+                                }
+                            </ul>
+
+                        </div>
+                        <!--/.nav-collapse -->
+
+
+
+                        <div class="collapse clearfix" id="search">
+
+                            <form class="navbar-form" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+
+                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                                    </span>
+                                </div>
+                            </form>
+
+                        </div>
+                        <!--/.nav-collapse -->
+
+                    </div>
+
+
+                </div>
+                <!-- /#navbar -->
+
+            @*</div>*@
+
+        </header>
+
+        <div class="left-navigation fsnav-wrapper" id="fsnav-wrapper-left">
+            <div class="fsnav-wrapper-inner">
+                <div class="fsnav-main">
+                    <div class="fsnav-heading-wrapper">
+                        <div class="fsnav-heading-inner">
+                            <div class="fsnav-heading-text">
+                                Brew A Gift
+                            </div>
+                            <a href="javascript:void(0);" class="fsnav-lhs-close">
+                                <i class="fa fa-close fsnav-lhs-closeicon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- BEGIN MAIN MENU -->
+                    <div class="fsnav-mainmenu">
+                        <ul class="nostyle zpadding fsnav-list p-0">
+                            <li class="fsnav-li  fsnav-main-li">
+                                <a href="#">
+                                    <i class="fa fa-home"></i>
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="fsnav-li  fsnav-main-li">
+                                <a href="#">
+                                    <i class="fa fa-ticket"></i>
+                                    Group
+                                </a>
+                            </li>
+                            <li class="fsnav-li fsnav-main-li">
+                                <ul class="nostyle zpadding fsnav-list p-0">
+                                    <li class="fsnav-li">
+                                        <a href="javascript:void(0);" class="fsnav-submenu-link" data-toggle="collapse" data-target="#fsnav-li-movie">
+                                            <i class="fa fa-video-camera"></i> Events
+                                            <span class="fsnav-li-exticon pull-right"><i class="fa fa-plus"></i></span>
+                                        </a>
+                                        <ul class="fsnav-list fsnav-submenu collapse" id="fsnav-li-movie">
+                                            <li>
+                                                <a href="#">Event 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Event 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fsnav-li ">
+                                <a href="#">
+                                    <i class="fa fa-smile-o"></i> Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END BEGIN MAIN MENU  -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="Login">Sign In</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="social-buttons">
+                            <div class="form-group">
+                                <label>
+                                    <form action="/Account/FacebookLogin" method="post">
+                                        <button id="submit" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</button>
+                                    </form>
+                                </label>
+                                <label>
+                                    <form action="/Account/LoginWithGoogle" method="post">
+                                        <button id="submit" class="btn btn-gp"><i class="fa fa-google-plus"></i> Google</button>
+                                    </form>
+                                </label>
+                            </div>
+                        </div>
+                        <h4>OR</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="EmailId" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="password">
+                        </div>
+                        <p class="text-muted" style="margin:0px"><a href='@Url.Action("ForgotPassword", "Account")'><strong>Forgot Password?</strong></a>!</p>
+                        <p class="red" style="margin:0px">
+                            <label id="errmsg"></label>
+                        </p>
+                        <p class="text-center">
+                            <button onclick="javascript:Login();" type="submit" class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
+                        </p>
+                        <p class="text-center text-muted"><a href='@Url.Action("Index", "Account")'><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <footer id="footer">
+            <div class="container">
+                <div class="col-md-3 col-sm-6">
+                    <h4>About us</h4>
+
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                </div>
+                <!-- /.col-md-3 -->
+
+                <div class="col-md-2 col-sm-6 footer-color">
+                    <h4>Usefull links</h4>
+                    <div>
+                        <a href='@Url.Action("Index", "Home")'> Home</a>
+                    </div>
+                    <div>
+                        <a href="#"> Gift Ideas</a>
+                    </div>
+                    <div>
+                        <a href='@Url.Action("Index", "HowItWorks")'>How It Works</a>
+                    </div>
+                    <div>
+                        <a href="#"> Terms & Condition</a>
+                    </div>
+                    <div>
+                        <a href='@Url.Action("Index", "About")'> About Us</a>
+                    </div>
+                    <div>
+                        <a href='@Url.Action("Index", "Contact")'>Contact Page</a>
+                    </div>
+
+                    <hr class="hidden-md hidden-lg">
+
+                </div>
+                <!-- /.col-md-3 -->
+
+                <div class="col-md-2 col-sm-6 getintouch">
+                    <h4>Get in Touch</h4>
+                    <p>
+                        <i class="fa fa-map-marker"></i> Ramamurthy Nagar,<br />&nbsp;&nbsp; Bangalore-560016
+                    </p>
+                    <p>
+                        <i class="fa fa-phone "> 8088529171</i>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope-o"> contactus@gift.com</i>
+                    </p>
+                </div>
+                <!-- /.col-md-3 -->
+
+                <div class="col-md-2 col-sm-6">
+                    <h4>Secure Payments</h4>
+                    <div class="form-group">
+                        <label>
+                            <img class="img-responsive" src="/img/MasterCard.png">
+                        </label>
+                        <label>
+                            <img class="img-responsive" src="/img/visa.png">
+                        </label>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="row">
+                        <h4>Newsletter</h4>
+                        <form>
+                            <div class="input-group">
+
+                                <input type="text" placeholder="Enter your Email-Id..." class="form-control">
+
+                                <span class="input-group-btn">
+
+                                    <button class="btn btn-default" type="button"><i class="fa fa-send"></i></button>
+
+
+                                </span>
+
+                            </div>
+                            <hr>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- /.container -->
+            </div>
+        </footer>
+
+        <div id="copyright">
+            <div class="container">
+                <div class="col-md-12">
+                    <p class="text-center">
+                        2015 Copyright@brewAgift
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderPage("ClientMessage.cshtml")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    
+    <script type="text/javascript">
+    // When the document is ready
+    $(document).ready(function () {
+
+        $('.datepicker').datepicker({
+            format: "dd/mm/yyyy"
+        });
+
+
+    });
+    </script>
+    <style>
+        .left-navigation {
+            background: #da4d4d;
+        }
+
+        .fsnav-lhs-close {
+            color: #FFF;
+        }
+
+        .fsnav-heading-text {
+            color: #FFF;
+        }
+
+        .fsnav-list .fsnav-li a {
+            color: #FFF;
+        }
+
+        .fsnav-li a:hover, .fsnav-li a:focus {
+            background-color: #F2F2F2;
+            color: #da4d4d;
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        .social-buttons {
+            margin: 12px 0;
+        }
+
+        .btn-fb {
+            color: #fff;
+            background-color: #3b5998;
+        }
+
+            .btn-fb:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        .btn-gp {
+            color: #fff;
+            background-color: #EA4335;
+        }
+
+            .btn-gp:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+    </style>
+</body>
+</html>

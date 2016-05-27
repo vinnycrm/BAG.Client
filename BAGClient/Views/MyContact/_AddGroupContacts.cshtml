@@ -1,0 +1,64 @@
+﻿@model BAG.CustomObject.ContactsSummary
+
+<div class="modal fade" id="addGroupcontact" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true" style="dispay:block;">
+    <div class="modal-dialog modsize">
+        <div class="modal-content">
+            <div class="modal-body" id="modalresize">
+                <div class="panel-group" style="margin-bottom: 0.1cm;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: #DA4D4D; ">
+                            <i class="fa fa-times fa-2x pull-right removeicon2" aria-hidden="true" data-dismiss="modal"></i>
+                            <h3 class="panel-title redtext">
+                                <span class="pull-left"><i class="fa fa-plus-circle"></i>&nbsp;Add Contact</span><a href="javascript:P_AddManualContacts()">
+                                    <br />
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="panel-body col-md-12">
+                            @using (Ajax.BeginForm("AddGroupContact", "MyContact", null, new AjaxOptions
+                                    {
+                                        HttpMethod = "POST",
+                                        UpdateTargetId = "resultTarget",
+                                        OnSuccess = "GetGroupDetails('" + @Model.groupId + "')"
+                                    }, new { id = "resultTarget" }))
+                            {
+                                <div class="row">
+                                    <button style="margin-bottom:15px;" class=" btn btn-default buttoncolor col-md-offset-9" data-backdrop="static" data-keyboard="false">
+                                        <span class="fa fa-plus-circle"></span>
+                                        Add Contact
+                                    </button>
+                                </div>
+                                <div class="table-responsive table-fixed">
+                                    <table class="table table-bordered table-hover table-fixed">
+
+                                        <thead class="headeralign">
+                                            <tr>
+                                                <th class="headeralign">Select</th>
+                                                <th class="headeralign">Name</th>
+                                                <th class="headeralign">E-mail</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @for (int i = 0; i < Model.UserContacts.Count(); i++)
+                                            {
+                                                <tr>
+                                                    <td align="center">@Html.CheckBoxFor(model => model.UserContacts[i].Selected)</td>
+                                                    <td align="center">@Model.UserContacts[i].Name</td>
+                                                    <td align="center">@Model.UserContacts[i].EmailID</td>
+                                                    @Html.HiddenFor(model => model.UserContacts[i].UserId, new { Value = @Model.UserContacts[i].UserId })
+                                                </tr>
+                                            }
+                                        </tbody>
+                                        @Html.HiddenFor(model => model.groupId, new { Value = @Model.groupId })
+                                    </table>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>

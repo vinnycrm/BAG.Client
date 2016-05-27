@@ -1,0 +1,238 @@
+﻿@model BAG.Models.MyContacts
+@{
+    if (ViewBag.Message != null)
+    {
+        <script>
+            window.onload = function () {
+                GetAllContacts();
+                DisplayMessage('@ViewBag.Message');
+            };
+        </script>
+    }
+    else
+    {
+        <script>
+            window.onload = function () {
+                GetAllContacts();
+            };
+        </script>
+    }
+}
+
+<section>
+    <div id="heading-breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>MY CONTACTS</h1>
+                </div>
+                <div class="col-md-5">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href='@Url.Action("Index", "Home")'>Home</a>
+                        </li>
+
+                        <li>My Contacts</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-3">
+            <div class="panel panel-default sidebar-menu with-icons" style="border:none;">
+                <div class="panel-body">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">My Contacts</h3>
+                    </div>
+                    <br />
+                    <div class="list-group">
+                        <a style="text-decoration:none;" href="javascript:GetAllContacts()" class="list-group-item ">
+                            <i class="fa fa-user fa-lg pull-left"></i>&nbsp;All Contacts
+                        </a>
+                    </div>
+                    <hr />
+                    <div class="panel-heading">
+                        <h3 class="panel-title">My Groups</h3>
+                        <a class="btn btn-xs btn-danger pull-right" href="javascript:P_CreateGroup()"><i class="fa fa-times-circle"></i> <span class="hidden-sm">New</span></a>
+                    </div>
+                    <br />
+                    <div id="GroupsId">
+                        @{Html.RenderAction("SelectGroups", "MyContact");}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="ContactsListId"></div>
+        </div>
+    </div>
+
+    <div id="PId"></div>
+    <input id="GroupId" type="hidden" />
+</section>
+<script>
+    function P_EditContact(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("P_EditContact", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id }
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#edit').modal('show');
+        });
+    }
+    function P_AddManualContacts() {
+        jQuery.ajax({
+            url: '@Url.Action("P_AddManualContacts", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: {}
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#addcontact').modal('show');
+        });
+    }
+    function P_CreateGroup() {
+        jQuery.ajax({
+            url: '@Url.Action("P_CreateGroup", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: {}
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#creategroup').modal('show');
+        });
+    }
+
+    function P_DeleteGroup(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("P_DeleteGroups", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id }
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#delete').modal('show');
+        });
+    }
+    function P_EditGroup(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("P_EditGroups", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id }
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#editgroup').modal('show');
+        });
+    }
+
+    function P_AddContact() {
+        jQuery.ajax({
+            url: '@Url.Action("P_AddContact", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Group_Id: document.getElementById("GroupId").value }
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#addGroupcontact').modal('show');
+        });
+    }
+
+    function P_DeleteContact(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("P_DeleteContact", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id }
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#deletecontact').modal('show');
+        });
+    }
+
+    function P_DeleteGroupContact(Id, ContactId) {
+        jQuery.ajax({
+            url: '@Url.Action("P_DeleteGroupContact", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id, Contact_Id: ContactId }
+        }).done(function (result) {
+            $('#PId').html(result);
+            $('#deleteGroupcontact').modal('show');
+        });
+    }
+
+    function UpdateGroups() {
+        jQuery.ajax({
+            url: '@Url.Action("SelectGroups", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: {}
+        }).done(function (result) {
+            $('#GroupsId').html(result);
+        });
+    }
+
+    function GetAllContacts() {
+        jQuery.ajax({
+            url: '@Url.Action("AllContacts", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: {}
+        }).done(function (result) {
+            $('#ContactsListId').html(result);
+        });
+    }
+
+    function GetGroupDetails(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("GroupSummary", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { GroupId: Id }
+        }).done(function (result) {
+            $('#ContactsListId').html(result);
+            document.getElementById("GroupId").value = Id;
+        });
+    }
+
+    function DeleteGroup(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("DeleteGroups", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id }
+        }).done(function (result) {
+            $('#deletemsg').html(result);
+            UpdateGroups();
+        });
+    }
+
+    function DeleteContact(Id) {
+        jQuery.ajax({
+            url: '@Url.Action("Delete_Contact", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id }
+        }).done(function (result) {
+            $('#deletecntmsg').html(result);
+            GetAllContacts();
+        });
+    }
+
+    function DeleteGroupContact(Id, ContactId) {
+        jQuery.ajax({
+            url: '@Url.Action("Delete_GroupContact", "MyContact")',
+            method: "POST",
+            cache: false,
+            data: { Id: Id, Contact_Id: ContactId }
+        }).done(function (result) {
+            $('#removecntmsg').html(result);
+            GetGroupDetails(Id);
+        });
+    }
+</script>

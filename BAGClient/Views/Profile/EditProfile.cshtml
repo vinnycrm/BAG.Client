@@ -1,0 +1,192 @@
+﻿@model BAG.CustomObject.MemberProfile
+
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Edit Profile</h1>
+            </div>
+            <div class="col-md-5">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href='@Url.Action("MyProfile", "Profile")'>Profile</a>
+                    </li>
+
+                    <li>Edit Profile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default" style="border: 2px solid #da4d4d;">
+                <div class="panel-heading" style="background-color: #da4d4d;">
+                    <h3 class="panel-title redtext">
+                        <span class="pull-left"><i class="fa fa-fw fa-user"></i>&nbsp;Profile Information</span><a href="#" data-toggle="modal" data-target="#Announcement">
+                            <br/>
+                        </a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body" style="background-color:whitesmoke;">
+                                <div class="profile-userpic">
+                                    <img src='@Model.EditProfile.Media_Id_Img' alt="ALT NAME" class="img-responsive ">
+                                </div>
+                                <div id="sideNavigation">
+                                    <ul style="margin-top:10px;padding-left:0.1cm;">
+                                        <li>
+                                            <a data-placement="right"><i class="fa fa-user"></i>&nbsp;@Model.EditProfile.First_Name</a>
+                                        </li>
+                                        <li>
+                                            <a data-placement="right"><i class="fa fa-birthday-cake"></i>&nbsp; @Model.EditProfile.Date_Of_Birth.ToString("dd MMM yyyy")</a>
+                                        </li>
+                                        <li>
+                                            <a data-placement="right"><i class="fa fa-map-marker"></i>R M Nagar Bangalore </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color:whitesmoke">
+                                <h3 class="panel-title texttrans">
+                                    <span class="pull-left fontstyle">Update Profile Information</span>
+                                    <br/>
+                                </h3>
+                            </div>
+                            <div class="panel-body" style="background-color:whitesmoke;">
+                                @using (Html.BeginForm("EditProfileDetails", "Profile",FormMethod.Post,new { enctype = "multipart/form-data" }))
+                                {
+                                    <div class="col-md-6">
+                                        <div class="register-form">
+                                            <div class="email col-md-10">
+                                                <label for="email">First Name:</label><div class="clear"></div>
+                                                @Html.TextBoxFor(model => model.EditProfile.First_Name, new { @class = "form-control", @onkeypress = "return EnableKeys(1,event);", @maxlength = "100", @placeholder = "First Name" })
+                                            </div>
+                                            <div class="email col-md-10">
+                                                <label for="email">Last Name:</label><div class="clear"></div>
+                                                @Html.TextBoxFor(model => model.EditProfile.Last_Name, new { @class = "form-control", @onkeypress = "return EnableKeys(1,event);", @maxlength = "100", @placeholder = "Last Name" })
+                                            </div>
+                                            <div class="email col-md-10">
+                                                <label for="email">Alternate Email-Id:</label><div class="clear"></div>
+                                                @Html.TextBoxFor(model => model.EditProfile.Alt_Email_Id, new { @class = "form-control", @onkeypress = "return EnableKeys(4,event);", @maxlength = "100", @placeholder = "Email-Id" })
+                                            </div>
+                                            <div class="name col-md-10">
+                                                <label for="name">Gender&nbsp;</label>
+                                                <div>
+                                                    @foreach (var item in Model.Gender)
+                                                    {
+                                                        <div>
+                                                            @Html.RadioButtonFor(model => model.EditProfile.Gender, item.Id)
+                                                            @Html.Label(@item.title)
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <div class="email col-md-10">
+                                                <label for="email">Date Of Birth:</label><div class="clear"></div>
+                                                @Html.TextBoxFor(model => model.EditProfile.Date_Of_Birth, new { @class = "form-control datepicker", @onkeypress = "return false;", @maxlength = "100", @placeholder = "Date Of Birth" })
+                                            </div>
+                                            <div class="email col-md-10">
+                                                <label for="email">Address:</label><div class="clear"></div>
+                                                @Html.TextBoxFor(model => model.EditProfile.Address_Id, new { @class = "form-control", @onkeypress = "return EnableKeys(2,event);", @maxlength = "1", @placeholder = "Address" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="register-form">
+                                            
+                                            <div class="name col-md-10">
+                                                <label for="name">Is Married?&nbsp;</label>
+                                                @foreach (var item in Model.IsMarriedList)
+                                                {
+                                                    <div>
+                                                        @Html.RadioButtonFor(model => model.EditProfile.Is_married, item.Id)
+                                                        @Html.Label(@item.title)
+                                                    </div>
+                                                }
+                                            </div>
+                                            <div id="avsdate" class="email col-md-10">
+                                                <label for="Aniversary Date">Aniversary Date:</label><div class="clear"></div>
+                                                @Html.TextBoxFor(model => model.EditProfile.Wed_anniversary, new { @class = "form-control datepicker", @onkeypress = "return false;", @maxlength = "100", @placeholder = "Anniversary Date" })
+                                            </div>
+                                            <div class="email col-md-10">
+                                                <label for="email">About me:</label><div class="clear"></div>
+                                                @Html.TextAreaFor(model => model.EditProfile.About_member, new { @class = "form-control", @onkeypress = "return EnableKeys(4,event);", @maxlength = "100", @placeholder = "About Me" })
+                                            </div>
+                                            <div class="email col-md-10">
+                                                <label for="email">Profile Picture:</label><div class="clear"></div>
+                                                <input id="file" type="file" name="file">
+                                                <div id="dvPreview"></div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div id="resultTarget" class="col-md-12 text-center"></div>
+                                    <div class="col-md-12 text-center" id="register-submit">
+                                        <button type="submit" class="btn btn-primary btn-md">Update</button>
+                                        <button class="btn btn-default buttoncolor">Cancel</button>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $("#file").change(function () {
+            if (typeof (FileReader) != "undefined") {
+                var dvPreview = $("#dvPreview");
+                dvPreview.html("");
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                $($(this)[0].files).each(function () {
+                    var file = $(this);
+                    if (regex.test(file[0].name.toLowerCase())) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            var img = $("<img />");
+                            img.attr("style", "height:100px;width: 100px");
+                            img.attr("src", e.target.result);
+                            dvPreview.append(img);
+                        }
+                        reader.readAsDataURL(file[0]);
+                    } else {
+                        alert(file[0].name + " is not a valid image file.");
+                        dvPreview.html("");
+                        return false;
+                    }
+                });
+            } else {
+                alert("This browser does not support HTML5 FileReader.");
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#Ismarried1').change(function () {
+            $('#avsdate').show();
+        });
+
+        $('#Ismarried2').change(function () {
+
+            $('#avsdate').hide();
+        });
+        if (document.getElementById('Ismarried1').checked == true) {
+            $('#avsdate').show();
+        }
+        else if (document.getElementById('Ismarried2').checked == true) {
+            $('#avsdate').hide();
+        }
+    });
+</script>

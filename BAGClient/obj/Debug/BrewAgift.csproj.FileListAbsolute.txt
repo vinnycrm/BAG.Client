@@ -1,0 +1,194 @@
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\GroupGifts.dll.config
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\GroupGifts.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\GroupGifts.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Antlr3.Runtime.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\aspsnippets.facebookapi.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\DataObject.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\EntityFramework.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\EntityFramework.SqlServer.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\FSharp.Core.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Google.GData.Apps.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Google.GData.Client.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Google.GData.Contacts.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Google.GData.Extensions.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\MailChimp.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Mandrill.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.AspNet.Identity.Core.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Cookies.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Facebook.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Google.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.OAuth.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Twitter.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Web.Infrastructure.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Newtonsoft.Json.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Owin.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\RestSharp.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Helpers.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Mvc.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Optimization.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Razor.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.WebPages.Deployment.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.WebPages.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.WebPages.Razor.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\WebGrease.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\BusinessLogic.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\DataObject.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\FSharp.Core.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\MailChimp.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Newtonsoft.Json.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Helpers.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Mvc.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Optimization.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.Razor.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.WebPages.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.WebPages.Deployment.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\System.Web.WebPages.Razor.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Antlr3.Runtime.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\EntityFramework.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\EntityFramework.SqlServer.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.AspNet.Identity.Core.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Facebook.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Cookies.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.OAuth.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Google.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.Twitter.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\obj\Debug\BrewAgift.csprojResolveAssemblyReference.cache
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\obj\Debug\GroupGifts.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\GroupGifts\obj\Debug\GroupGifts.pdb
+D:\c#\BAGClient\BAGClient\obj\Debug\BrewAgift.csprojResolveAssemblyReference.cache
+D:\c#\BAGClient\BAGClient\bin\GroupGifts.dll.config
+D:\c#\BAGClient\BAGClient\bin\GroupGifts.dll
+D:\c#\BAGClient\BAGClient\bin\GroupGifts.pdb
+D:\c#\BAGClient\BAGClient\bin\Antlr3.Runtime.dll
+D:\c#\BAGClient\BAGClient\bin\BAG.CustomObject.dll
+D:\c#\BAGClient\BAGClient\bin\BusinessLogic.dll
+D:\c#\BAGClient\BAGClient\bin\EntityFramework.dll
+D:\c#\BAGClient\BAGClient\bin\EntityFramework.SqlServer.dll
+D:\c#\BAGClient\BAGClient\bin\FSharp.Core.dll
+D:\c#\BAGClient\BAGClient\bin\MailChimp.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.AspNet.Identity.Core.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Cookies.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Facebook.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Google.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.OAuth.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Twitter.dll
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Web.Infrastructure.dll
+D:\c#\BAGClient\BAGClient\bin\Owin.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.Helpers.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.Mvc.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.Optimization.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.Razor.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.WebPages.Deployment.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.WebPages.dll
+D:\c#\BAGClient\BAGClient\bin\System.Web.WebPages.Razor.dll
+D:\c#\BAGClient\BAGClient\bin\WebGrease.dll
+D:\c#\BAGClient\BAGClient\bin\BAG.CustomObject.pdb
+D:\c#\BAGClient\BAGClient\bin\BusinessLogic.pdb
+D:\c#\BAGClient\BAGClient\bin\FSharp.Core.xml
+D:\c#\BAGClient\BAGClient\bin\MailChimp.xml
+D:\c#\BAGClient\BAGClient\bin\Newtonsoft.Json.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.Helpers.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.Mvc.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.Optimization.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.Razor.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.WebPages.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.WebPages.Deployment.xml
+D:\c#\BAGClient\BAGClient\bin\System.Web.WebPages.Razor.xml
+D:\c#\BAGClient\BAGClient\bin\Antlr3.Runtime.pdb
+D:\c#\BAGClient\BAGClient\bin\EntityFramework.xml
+D:\c#\BAGClient\BAGClient\bin\EntityFramework.SqlServer.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.AspNet.Identity.Core.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Facebook.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Cookies.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.OAuth.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Google.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.Twitter.xml
+D:\c#\BAGClient\BAGClient\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\c#\BAGClient\BAGClient\obj\Debug\GroupGifts.dll
+D:\c#\BAGClient\BAGClient\obj\Debug\GroupGifts.pdb
+D:\c#\BAG\Client\BAGClient\bin\GroupGifts.dll.config
+D:\c#\BAG\Client\BAGClient\bin\GroupGifts.dll
+D:\c#\BAG\Client\BAGClient\bin\GroupGifts.pdb
+D:\c#\BAG\Client\BAGClient\bin\Antlr3.Runtime.dll
+D:\c#\BAG\Client\BAGClient\bin\BAG.CustomObject.dll
+D:\c#\BAG\Client\BAGClient\bin\BusinessLogic.dll
+D:\c#\BAG\Client\BAGClient\bin\EntityFramework.dll
+D:\c#\BAG\Client\BAGClient\bin\EntityFramework.SqlServer.dll
+D:\c#\BAG\Client\BAGClient\bin\FSharp.Core.dll
+D:\c#\BAG\Client\BAGClient\bin\MailChimp.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.AspNet.Identity.Core.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Cookies.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Facebook.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Google.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.OAuth.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Twitter.dll
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Web.Infrastructure.dll
+D:\c#\BAG\Client\BAGClient\bin\Owin.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Helpers.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Mvc.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Optimization.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Razor.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.WebPages.Deployment.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.WebPages.dll
+D:\c#\BAG\Client\BAGClient\bin\System.Web.WebPages.Razor.dll
+D:\c#\BAG\Client\BAGClient\bin\WebGrease.dll
+D:\c#\BAG\Client\BAGClient\bin\BAG.CustomObject.pdb
+D:\c#\BAG\Client\BAGClient\bin\BusinessLogic.pdb
+D:\c#\BAG\Client\BAGClient\bin\FSharp.Core.xml
+D:\c#\BAG\Client\BAGClient\bin\MailChimp.xml
+D:\c#\BAG\Client\BAGClient\bin\Newtonsoft.Json.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Helpers.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Mvc.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Optimization.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.Razor.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.WebPages.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.WebPages.Deployment.xml
+D:\c#\BAG\Client\BAGClient\bin\System.Web.WebPages.Razor.xml
+D:\c#\BAG\Client\BAGClient\bin\Antlr3.Runtime.pdb
+D:\c#\BAG\Client\BAGClient\bin\EntityFramework.xml
+D:\c#\BAG\Client\BAGClient\bin\EntityFramework.SqlServer.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.AspNet.Identity.Core.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Facebook.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Cookies.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.OAuth.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Google.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.Twitter.xml
+D:\c#\BAG\Client\BAGClient\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\c#\BAG\Client\BAGClient\obj\Debug\BrewAgift.csprojResolveAssemblyReference.cache
+D:\c#\BAG\Client\BAGClient\obj\Debug\GroupGifts.dll
+D:\c#\BAG\Client\BAGClient\obj\Debug\GroupGifts.pdb

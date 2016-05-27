@@ -1,0 +1,14 @@
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Debug\DataObject.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\bin\Debug\DataObject.pdb
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\obj\Debug\BAG.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts\GroupGifts\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\c#\BAGClient\BusinessLogic\obj\Debug\BAG.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\c#\BAGClient\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\c#\BAGClient\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\c#\BAGClient\BusinessLogic\bin\Debug\BAG.CustomObject.dll
+D:\c#\BAGClient\BusinessLogic\bin\Debug\BAG.CustomObject.pdb
+D:\c#\BAGClient\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\c#\BAGClient\BusinessLogic\obj\Debug\BusinessLogic.pdb

@@ -1,0 +1,50 @@
+<body>
+   
+<table>
+<tbody> 
+<tr>
+<td style="position:relative;left:200px;" width="400" align="center" bgcolor="whiteSmoke"> <img src="http://brewagift.prayogis.com/img/logo.jpg" height="100" width="150">
+</td>
+</tr>
+
+<tr>
+<td style="position:relative;left:200px;" width="400" bgcolor="white"> <h2 style="color:#003366;">Hey, thanks for joining<h2/> <h4>Welcome to Brew A Gift! Before you get started, please verify your email address below </h4> 
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#003366" align="center" style="position:relative;left:200px;" width="2"><a style="color:white;font-size:20pt;text-decoration:none;" href=[HLink]> Verify Email Address</a>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" align="center" style="position:relative;left:200px;" width="400">  
+<b>If the link does not work, please copy and paste the following URL into your browser:</b>
+<p> [Link] </p>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" align="center" style="position:relative;left:200px;" width="400">
+<b>Thank you for visiting Brew A Gift. Our mission is to provide unrivalled and unbiased informative and resources to help any sports fan who enjoys a flutter make informed and valued decisions.<b>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#003366" align="center"  style="position:relative;left:200px;"  width="400">
+<a href="next.html" style="color:white;font-size:16pt; text-decoration:none;position:relative; left:100px;">Need Help ? Contact BrewAGift </a>
+</td>
+</tr>
+
+<tr>
+<td  style="position:relative;left:200px;" width="400px">
+<br> 
+  <a style="border-radius: 5px;padding: 2% 10%;text-decoration: none; background-color:#4e69a2; color:white;" href="https://www.facebook.com/MySportsIndia/">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ 	<a style="border-radius: 5px;padding: 2% 10%;text-decoration: none; background-color:#c32f10;color:white;" href="https://www.google.com/MySportsIndia/">Google</a>						
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+

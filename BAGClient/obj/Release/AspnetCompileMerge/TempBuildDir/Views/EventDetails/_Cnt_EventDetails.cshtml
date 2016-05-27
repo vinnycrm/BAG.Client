@@ -1,0 +1,191 @@
+﻿
+@model BAG.Models.EventSummary
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="tabs">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#tab-1" data-toggle="tab"><i class="icon-star"></i>Items</a>
+                </li>
+                <li class="">
+                    <a href="#tab-2" data-toggle="tab">Invites</a>
+                </li>
+                <li>
+                    <a href="#tab-3" data-toggle="tab">My Contributions</a>
+                </li>
+            </ul>
+            <div class="tab-content" style="padding-top:0px;">
+                <div class="tab-pane active" id="tab-1">
+                    <div class="row">
+                        <div class="col-md-12" style="margin-top: 10px;">
+                                <button class="btn btn-default buttoncolor pull-right " id="great"
+                                        data-title=" add" data-backdrop="static" data-keyboard="false">
+                                    <span class="fa fa-plus-circle"></span>
+                                    Contribute
+                                </button>
+                        </div>
+                        <div class="col-md-12 " id="style-4">
+
+                            @if (Model.ItemList.Count() > 0)
+                            {
+                                foreach (var items in Model.ItemList)
+                                {
+                                    <div class="col-sm-4 col-md-3 img-hover">
+                                        <div class="col-item">
+                                            <div class="photo">
+                                                <p data-placement="top" data-title="Amount" data-toggle="tooltip"><button class="buttondisable btn btn-default btn-xs"><span class="fa fa-inr"></span>&nbsp;@items.Item_Tentative_Cost</button></p>
+                                                <a id="pop_close closeimg" class="close pull-right" onclick="return false;" style="background: url(/Img/sprite-icons.png)-10px -212px no-repeat;"></a>
+                                                <img src='@items.Media_Id_Img' class="img-responsive" alt="a" />
+                                            </div>
+                                            <div class="info">
+                                                <div class="row" style="margin-right:0px;margin-left:0px;">
+                                                    <div>
+                                                        <h6 class="text-center">
+                                                            @items.Item_Name
+                                                        </h6>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="col-md-12 text-center">
+                                    <h3>Wishlist Has No Items!!</h3>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br /><br />
+                            @if (Model.InvitedMembers != null)
+                            {
+                                if (Model.InvitedMembers.Count() > 0)
+                                {
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sl No.</th>
+                                                    <th>E-mail</th>
+                                                    <th>Phone No.</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var items in Model.InvitedMembers)
+                                                {
+                                                    <tr>
+                                                        <th>#1</th>
+                                                        <td>@items.Email_Id</td>
+                                                        <td>@items.Phone_No</td>
+                                                        @if (items.Status == "1")
+                                                        {
+                                                            <td>
+                                                                <span class="label label-info">Going</span>
+                                                            </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td>
+                                                                <span class="label label-info">Invited</span>
+                                                            </td>
+                                                        }
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-md-12 text-center">
+                                        <h4>You Have Not Invited any Members</h4>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="col-md-12 text-center">
+                                    <h4>You Have Not Invited any Members</h4>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                    <br>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Sl No.</th>
+                                    <th>E-mail</th>
+                                    <th>Item Name</th>
+                                    <th>Amount</th>
+                                    <th>Contribute Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th># 1</th>
+                                    <td>supraj@gmail.com</td>
+                                    <td>Mobile,laptop</td>
+                                    <td>1000</td>
+                                    <td>2/2/2010</td>
+                                    <td>
+                                        <span class="label label-success">Recived</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th># 1</th>
+                                    <td>supraj@gmail.com</td>
+                                    <td>Mobile</td>
+                                    <td>1000</td>
+                                    <td>2/2/2010</td>
+                                    <td>
+                                        <span class="label label-info">Onhold</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th># 1</th>
+                                    <td>supraj@gmail.com</td>
+                                    <td>Mobile,laptop</td>
+                                    <td>1000</td>
+                                    <td>2/2/2010</td>
+                                    <td>
+                                        <span class="label label-success">Recived</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th># 1</th>
+                                    <td>supraj@gmail.com</td>
+                                    <td>Car</td>
+                                    <td>1000</td>
+                                    <td>2/2/2010</td>
+                                    <td>
+                                        <span class="label label-success">Recived</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!--end of .table-responsive-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

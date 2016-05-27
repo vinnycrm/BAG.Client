@@ -1,0 +1,126 @@
+﻿@model BAG.Models.InviteContacts
+
+
+<div class="modal fade" id="makeinvitesmodal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true" style="dispay:block;">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-body" id="modalresize">
+                <div class="panel-group " style="margin-bottom: 0.1cm;">
+                    <div class="panel">
+                        <div class="panel-heading" style="padding:5px 15px;">
+                            <i class="fa fa-times fa-2x pull-right removeicon2" aria-hidden="true" data-dismiss="modal"></i>
+                            <h3 class="panel-title redtext">
+                                <span class="pull-left"><i class="fa fa-fw fa-send"></i>&nbsp;Send Invites</span><a href="#" data-toggle="modal" data-target="#Announcement">
+                                    <br />
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="panel-body col-md-12">
+                            <div id="Tabs" role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="active">
+                                        <a href="#personal" aria-controls="personal" role="tab" data-toggle="tab">
+                                            Invite Contact
+                                        </a>
+                                    </li>
+                                    <li><a href="#employment" aria-controls="employment" role="tab" data-toggle="tab">Invite group</a></li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content invitetab">
+
+                                    <div role="tabpanel" class="tab-pane active" id="personal">
+                                        @using (Ajax.BeginForm("SendInvites", "EventDetails", null, new AjaxOptions
+                                    {
+                                        HttpMethod = "POST",
+                                        UpdateTargetId = "resultTarget",
+                                        OnSuccess = "UpdateEventSummary()"
+                                    }, new { id = "resultTarget" }))
+                                        {
+                                            <button class="btn btn-default buttoncolor col-md-offset-9" data-toggle="modal" data-backdrop="static" data-keyboard="false">
+
+                                                <span class="fa fa-plus-circle"></span>
+                                                Invite Contact
+                                            </button>
+                                            <div class="table-responsive table-fixed">
+                                                <table class="table table-bordered table-hover table-fixed">
+
+                                                    <thead class="">
+                                                        <tr>
+                                                            <th>Select</th>
+                                                            <th>E-mail</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @for (int i = 0; i < Model.InvitedMembers.Count(); i++)
+                                                        {
+                                                            <tr>
+                                                                <td align="center">@Html.CheckBoxFor(model => model.InvitedMembers[i].Selected)</td>
+                                                                <td align="center">@Model.InvitedMembers[i].EmailID</td>
+                                                                <td align="center">
+                                                                    <span class="label label-success">Invited</span>
+                                                                </td>
+                                                            </tr>
+                                                            @Html.HiddenFor(model => model.InvitedMembers[i].EmailID, new { @value = @Model.InvitedMembers[i].EmailID })
+                                                            @Html.HiddenFor(model => model.InvitedMembers[i].ContactNo, new { @value = @Model.InvitedMembers[i].ContactNo })
+                                                            @Html.HiddenFor(model => model.InvitedMembers[i].UserId, new { @value = @Model.InvitedMembers[i].UserId })
+                                                        }
+                                                        @Html.HiddenFor(model => model.Event_Id, new { @value = Model.Event_Id })
+                                                        @Html.HiddenFor(model => model.wishlist_Id, new { @value = Model.wishlist_Id })
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane" id="employment">
+                                        <div class="panel-group ">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label><img src="/Img/pic6.jpg" class="img-responsive" style="height:40px;width:50px;position:relative;top:20px;"></label>
+
+                                                                <label><small style="font-size:15pt;">Pu Circle</small></label>
+                                                                <label><span class="_51lp _5ugf _5ugh" id="u_0_t">12</span></label>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 invitebutton">
+
+                                                            <button class="btn btn-default botonpos btn-xs col-md-offset-6" data-backdrop="static"><span class="fa fa-plus-square"></span>&nbsp;Invite group</button>
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <label><img src="/Img/pic6.jpg" class="img-responsive" style="height:40px;width:50px;position:relative;top:20px;"></label>
+                                                                <label><small style="font-size:15pt;">Brew A Gift</small></label>
+                                                                <label><span class="_51lp _5ugf _5ugh" id="u_0_t">12</span></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 invitebutton">
+                                                            <button class="btn btn-default btn-xs col-md-offset-6" data-backdrop="static"><span class="fa fa-plus-square"></span>&nbsp;Invite group</button>
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>

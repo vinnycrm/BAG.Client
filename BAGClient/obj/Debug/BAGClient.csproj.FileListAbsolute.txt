@@ -1,0 +1,1 @@
+D:\c#\BAGClient\BAGClient\obj\Debug\BAGClient.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+D:\office latest\Groupgifting\GroupGifts-new\GroupGifts\BusinessLogic\bin\Release\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts-new\GroupGifts\BusinessLogic\bin\Release\BusinessLogic.pdb
+D:\office latest\Groupgifting\GroupGifts-new\GroupGifts\BusinessLogic\obj\Release\BusinessLogic.dll
+D:\office latest\Groupgifting\GroupGifts-new\GroupGifts\BusinessLogic\obj\Release\BusinessLogic.pdb

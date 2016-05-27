@@ -1,0 +1,4 @@
+D:\c#\BAGClient\BAG.CustomObject\bin\Debug\BAG.CustomObject.dll
+D:\c#\BAGClient\BAG.CustomObject\bin\Debug\BAG.CustomObject.pdb
+D:\c#\BAGClient\BAG.CustomObject\obj\Debug\BAG.CustomObject.dll
+D:\c#\BAGClient\BAG.CustomObject\obj\Debug\BAG.CustomObject.pdb

@@ -1,0 +1,27 @@
+﻿@model BAG.CustomObject.DeleteContact
+
+<div class="modal fade" id="deleteGroupcontact" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true" style="dispay:block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body" style="padding:0px;">
+                <div class="panel-group ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color: #DA4D4D;padding:12px; ">
+                                <a class="pull-right removeicon2" style="text-decoration:none;" href="#" data-dismiss="modal">X</a>
+                                <h3 class="panel-title redtext">
+                                    <span class="pull-left"><i class="fa fa-fw fa-info-circle"></i>&nbsp;Delete Contact</span><a href="#" data-toggle="modal" data-target="#Announcement">
+                                        <br />
+                                    </a>
+                                </h3>
+                            </div>
+                            <div id="removecntmsg" class="panel-body col-md-12 text-center">
+                                <div class="alert"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Contact?</div>
+                                <button type="button" onclick="Javascript:DeleteGroupContact('@Model.Id','@Model.Contact_Id')" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>&nbsp; &nbsp; &nbsp;
+                                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

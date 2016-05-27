@@ -1,0 +1,54 @@
+﻿@model BAG.CustomObject.EventsList[] 
+
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>My Events</h1>
+            </div>
+            <div class="col-md-5">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>My Events</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="col-md-12">
+        @foreach(var items in Model)
+        { 
+        <div class="col-md-3 col-sm-6 eventsimg">
+            <div class="grid1">
+                <div class="view view-first">
+                    <div class="index_img1"><img src='@items.Image' class="img-responsive" alt="" /></div>
+                    <a href='@Url.Action("Index", "EventDetails", new { id = @items.Event_Id })' class="mask">
+                        <div class="info1">
+                            <i class="search" id="masksearch"> </i> View More
+                        </div>
+                        <ul class="mask_img">
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </a>
+                </div>
+                <i class="home1"> </i>
+                <div class="inner_wrap" style="background-color:whitesmoke;">
+                    <h4 class="yellow">@items.Event_Name</h4>
+                    <h5>Total Attendies:@items.Total_attendies</h5>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+
+
+
+

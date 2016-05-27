@@ -1,0 +1,128 @@
+﻿@model BAG.Models.Create_Event
+
+<section>
+    <div id="heading-breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>New Event</h1>
+                </div>
+                <div class="col-md-5">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href='@Url.Action("Index", "Home")'>Home</a>
+                        </li>
+                        <li>
+                            <a href='@Url.Action("Index", "Home")'>Events</a>
+                        </li>
+                        <li>New Event</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container menu">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                        Create An Event
+                    </div>
+                    <div class="panel panel-body">
+                        <div class="col-md-12 clearfix">
+                                @using (Ajax.BeginForm("CreateEvent", "Events", null, new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    UpdateTargetId = "resultTarget"
+                                }, new { id = "EventCreateId" }))
+                                {
+                                    <div class="content">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="firstname">Event Name</label>
+                                                    @Html.TextBoxFor(model => model.CreateEvent.Event_Name, new { @class = "form-control", @maxlength = "100", @placeholder = "Event Name" })
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="lastname">Event Location</label>
+                                                    @Html.TextBoxFor(model => model.CreateEvent.Event_Location, new { @class = "form-control", @maxlength = "100", @placeholder = "Event Location" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="form-group">
+                                                    <label for="city">Event Start Date/Time</label>
+                                                    @Html.TextBoxFor(model => model.CreateEvent.Start_Date, new { @class = "form-control datepicker", @maxlength = "100", @placeholder = "Event Start Date" })
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="form-group">
+                                                    <label for="zip">Event Start Date/Time</label>
+                                                    @Html.TextBoxFor(model => model.CreateEvent.End_Date, new { @class = "form-control datepicker", @maxlength = "100", @placeholder = "Event End Date" })
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="lastname">Event Type</label>
+                                                    @Html.DropDownListFor(model => model.CreateEvent.Type_Id, new SelectList(Model.EventTypes, "Id", "Event_Name"), new { @class = "form-control", @type = "dropdown" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="firstname">Event Description</label>
+                                                    @Html.TextAreaFor(model => model.CreateEvent.Description, new { @class = "form-control datepicker", @maxlength = "500", @placeholder = "Event Description", @minlength = "5" })
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="firstname">Event Image<small>(optional)</small></label>
+                                                    <input type="file" id="firstname">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 text-center">
+                                                <div id="resultTarget" style="color:red">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 text-center">
+                                                <div class="form-group">
+                                                    <button class="btn btn-default" onclick="return EventCreation();" type="submit">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&dummy=.js"></script>
+<script type="text/javascript">
+    function initialize() {
+        var input = document.getElementById('CreateEvent_Event_Location')
+        var options = {
+            componentRestrictions: {
+            }
+        };
+        new google.maps.places.Autocomplete(input, options);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>

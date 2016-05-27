@@ -1,0 +1,127 @@
+﻿@model BAG.CustomObject.Registration
+
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>New account / Sign in</h1>
+            </div>
+            <div class="col-md-5">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href='@Url.Action("Index", "Home")'>Home</a>
+                    </li>
+                    <li>New account / Sign in</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-7">
+                <div class="box clearfix">
+                    <div class="heading">
+                        <h3 class="text-uppercase">Register</h3>
+                    </div>
+                    @using (Ajax.BeginForm("Register", "Account", null, new AjaxOptions
+                    {
+                        HttpMethod = "POST",
+                        UpdateTargetId = "resultTarget",
+                        OnSuccess="Redirect()"
+                    }, new { id = "RegisterId" })) 
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="Name">Name</label>
+                                    @Html.TextBoxFor(model => model.First_Name, new { @class = "form-control", @onkeypress = "return EnableKeys(1,event);", @maxlength = "100", @placeholder = "User Name" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="street">Email Id</label>
+                                    @Html.TextBoxFor(model => model.Email_Id, new { @class = "form-control", @onkeypress = "return EnableKeys(4,event);", @maxlength = "100", @placeholder = "Email-Id" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="Mobile Number">Mobile Number</label>
+                                    @Html.TextBoxFor(model => model.Phone_No, new { @class = "form-control", @onkeypress = "return EnableKeys(2,event);", @maxlength = "100", @placeholder = "Mobile No." })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control",@type="password", @onkeypress = "return EnableKeys(4,event);", @maxlength = "100", @placeholder = "Password" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="confirm password">Confirm password</label>
+                                    @Html.TextBoxFor(model => model.Cfm_Password, new { @class = "form-control", @type = "password", @onkeypress = "return EnableKeys(4,event);", @maxlength = "100", @placeholder = "Confirm Password" })
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                        <div id="resultTarget" style="color:red">
+                        </div>
+
+                            <div class="col-sm-12 col-md-offset-2">
+                                <button type="submit" onclick="return Registration();" class="btn btn-template-main"><i class="fa fa-save"></i> Register</button>
+                            </div>
+                    }
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="box">
+                    <h2 class="text-uppercase">Or</h2>
+                    <p class="lead">Register with Facebook</p>
+                    <div class="text-center">
+                      <form action="Account/FacebookLogin" method="post">
+                        <div class="login-form">
+                            <div id="login-submit">
+                                <input id="submit" src="/img/fbsignup.jpg" width="250" type="image" value="Facebook Login" />
+                            </div>
+                        </div>
+                      </form>
+                    </div>
+                    <br />
+                    <p class="lead">Register with Google</p>
+                    <div class="text-center">
+                        <form action="Account/LoginWithGoogle" method="post">
+                            <div class="login-form">
+                                <div id="login-submit">
+                                    <input id="submit" src="/img/googleplus.png" width="250" type="image" value="Facebook Login" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+</div>
+

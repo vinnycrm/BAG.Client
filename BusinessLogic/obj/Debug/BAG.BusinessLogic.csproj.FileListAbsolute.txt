@@ -12,3 +12,10 @@ D:\c#\BAGClient\BusinessLogic\bin\Debug\BAG.CustomObject.dll
 D:\c#\BAGClient\BusinessLogic\bin\Debug\BAG.CustomObject.pdb
 D:\c#\BAGClient\BusinessLogic\obj\Debug\BusinessLogic.dll
 D:\c#\BAGClient\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\c#\BAG\Client\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\c#\BAG\Client\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\c#\BAG\Client\BusinessLogic\bin\Debug\BAG.CustomObject.dll
+D:\c#\BAG\Client\BusinessLogic\bin\Debug\BAG.CustomObject.pdb
+D:\c#\BAG\Client\BusinessLogic\obj\Debug\BAG.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\c#\BAG\Client\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\c#\BAG\Client\BusinessLogic\obj\Debug\BusinessLogic.pdb

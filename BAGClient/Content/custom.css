@@ -1687,4 +1687,11 @@ background-color:whitesmoke;
     background-color: #555;
 }
 
+ .events .event_bg{
+ min-width: 100%;
+width: 100%;
+height: 230px;
+min-height: 100%;
+}
+
 
